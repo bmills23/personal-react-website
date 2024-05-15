@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+      "server": "npm run prebuild && npm start",
+      "start": "node --optimize_for_size --max_old_space_size=460 --gc_interval=100 index.js",
+      "prebuild": "cd .. && cd client && npm install && npm run build"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
