@@ -1,12 +1,13 @@
 const express = require('express');
-const path = require('path');
 const app = express();
-const publicPath = path.join(__dirname, '..', 'client/build');
+const port = 5000;
 
-app.use(express.static(publicPath));
+const directory = './client/public';
 
-app.get('/*', function (req, res) {
-    res.sendFile(path.join(publicPath, 'index.html'));
+app.get('/', (req, res) => {
+    res.sendFile(directory + '/index.html');
 });
 
-app.listen(process.env.PORT || 3000);
+app.listen(port, () => {
+    console.log(`Server is running on http://localhost:${port}`);
+});
