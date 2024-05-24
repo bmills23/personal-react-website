@@ -1,13 +1,28 @@
+let production = true;
+let folder;
+
+production ? folder = '../client/build' : folder = '../client/public';
+
 const express = require('express');
+const path = require('path');
 const app = express();
-const port = 5000;
 
-const directory = './client/public';
+// Serve API routes
+// app.use('/api', require('./routes/api'));
 
+// Serve static files from the React build directory
+app.use(express.static(path.join(__dirname, folder)));
+
+// For all other requests, send the index.html file
 app.get('/', (req, res) => {
-    res.sendFile(directory + '/index.html');
+  res.sendFile(path.join(__dirname, folder, 'index.html'));
 });
 
-app.listen(port, () => {
-    console.log(`Server is running on http://localhost:${port}`);
+app.get('/about', (req, res) => {
+    res.sendFile(path.join(__dirname, folder, 'index.html'));
+});
+
+const PORT = process.env.PORT || 5000;
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });

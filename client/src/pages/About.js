@@ -3,9 +3,6 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Grid from '@mui/material/Grid';
 import Container from '@mui/material/Container';
 
-import GitHubIcon from '@mui/icons-material/GitHub';
-import linkedinIcon from '@mui/icons-material/LinkedIn';
-
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 import Header from '../components/Header';

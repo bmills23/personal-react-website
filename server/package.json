@@ -3,6 +3,6 @@
     "express": "^4.19.2"
   },
   "scripts": {
-    "start": "nodemon index.js cd .. && cd client && npm start"
+    "start": "nodemon index.js"
   }
 }
