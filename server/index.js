@@ -1,7 +1,8 @@
-let production = true;
-let folder;
+require('dotenv').config();
 
-production ? folder = '../client/build' : folder = '../client/public';
+let folder = '../client/build';
+
+console.log(folder);
 
 const express = require('express');
 const path = require('path');

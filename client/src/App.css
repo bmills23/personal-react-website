@@ -1,6 +1,14 @@
-.App {
-  text-align: center;
+/* .theme-a {
+  background: #dca;
+  color: #731;
 }
+@media (prefers-color-scheme: dark) {
+  .theme-a.adaptive {
+    background: #753;
+    color: #dcb;
+    outline: 5px dashed #000;
+  }
+} */
 
 .App-logo {
   height: 40vmin;

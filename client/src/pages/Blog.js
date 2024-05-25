@@ -15,6 +15,8 @@ import Main from '../components/Main';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 
+import font from '../themes/Base';
+
 import post1 from '../components/blog-post.1.md';
 import post2 from '../components/blog-post.2.md';
 import post3 from '../components/blog-post.3.md';
@@ -91,7 +93,7 @@ const defaultTheme = createTheme();
 export default function Blog() {
   return (
     <ThemeProvider theme={defaultTheme}>
-      <CssBaseline />
+      <CssBaseline style={{ fontFamily: 'Karantina' }} />
       <Container maxWidth="lg">
         <Header title="Blog" sections={sections} />
         <main>
