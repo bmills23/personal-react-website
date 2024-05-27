@@ -6,8 +6,6 @@ import Container from '@mui/material/Container';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import linkedinIcon from '@mui/icons-material/LinkedIn';
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-
 import Header from '../components/Header';
 import MainFeaturedPost from '../components/MainFeaturedPost';
 import FeaturedPost from '../components/FeaturedPost';
@@ -15,23 +13,14 @@ import Main from '../components/Main';
 import Sidebar from '../components/Sidebar';
 import Footer from '../components/Footer';
 
-import font from '../themes/Base';
-
 import post1 from '../components/blog-post.1.md';
 import post2 from '../components/blog-post.2.md';
 import post3 from '../components/blog-post.3.md';
 
 const sections = [
-  { title: 'Technology', url: '#' },
-  { title: 'Design', url: '#' },
-  { title: 'Culture', url: '#' },
-  { title: 'Business', url: '#' },
-  { title: 'Politics', url: '#' },
-  { title: 'Opinion', url: '#' },
-  { title: 'Science', url: '#' },
-  { title: 'Health', url: '#' },
-  { title: 'Style', url: '#' },
-  { title: 'Travel', url: '#' },
+  { title: 'Blogs', url: '#' },
+  { title: 'About Me', url: '#' },
+  { title: 'Featured Websites', url: '#' }
 ];
 
 const mainFeaturedPost = {
@@ -87,15 +76,12 @@ const sidebar = {
   ],
 };
 
-// TODO remove, this demo shouldn't need to reset the theme.
-const defaultTheme = createTheme();
-
 export default function Blog() {
   return (
-    <ThemeProvider theme={defaultTheme}>
-      <CssBaseline style={{ fontFamily: 'Karantina' }} />
+    <>
+      <CssBaseline />
       <Container maxWidth="lg">
-        <Header title="Blog" sections={sections} />
+        <Header title="Bryan Mills" sections={sections} />
         <main>
           <MainFeaturedPost post={mainFeaturedPost} />
           <Grid container spacing={4}>
@@ -118,6 +104,6 @@ export default function Blog() {
         title="Footer"
         description="Something here to give the footer a purpose!"
       />
-    </ThemeProvider>
+    </>
   );
 }

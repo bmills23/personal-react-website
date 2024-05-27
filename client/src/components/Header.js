@@ -15,13 +15,14 @@ function Header(props) {
       <Toolbar sx={{ borderBottom: 1, borderColor: 'divider' }}>
         <Button size="small">Subscribe</Button>
         <Typography
-          component="h2"
-          variant="h5"
+          component="h1"
+          variant="h3"
           color="inherit"
           align="center"
           noWrap
           sx={{ flex: 1 }}
         >
+          
           {title}
         </Typography>
         <IconButton>
@@ -41,7 +42,8 @@ function Header(props) {
             color="inherit"
             noWrap
             key={section.title}
-            variant="body2"
+            component="h2"
+            variant="h5"
             href={section.url}
             sx={{ p: 1, flexShrink: 0 }}
           >
