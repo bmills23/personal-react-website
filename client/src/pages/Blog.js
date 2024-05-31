@@ -18,9 +18,9 @@ import post2 from '../components/blog-post.2.md';
 import post3 from '../components/blog-post.3.md';
 
 const sections = [
-  { title: 'Blogs', url: '#' },
-  { title: 'About Me', url: '#' },
-  { title: 'Featured Websites', url: '#' }
+  { title: 'Blogs', url: '/Blogs' },
+  { title: 'About Me', url: '/about' },
+  { title: 'Featured Websites', url: '/featured' },
 ];
 
 const mainFeaturedPost = {

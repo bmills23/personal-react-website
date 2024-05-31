@@ -4,14 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
-import { theme } from './themes/font';
+import { theme } from './themes/theme';                                       
 import { ThemeProvider } from '@mui/material';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
+
 root.render(
-  <ThemeProvider theme={theme}>
+  <ThemeProvider theme={window.matchMedia('(prefers-color-scheme: dark)').matches ? theme.palette.dark : theme.palette.light}>
     <React.StrictMode>
-        <App />
+      <App />
     </React.StrictMode>
   </ThemeProvider>
 );
